@@ -75,7 +75,7 @@ int main(void) {
     f = 0;
     return 0;
 }" HAVE_TLS_MODEL)
-if(HAVE_TLS_MODEL)
+if(HAVE_TLS_MODEL AND NOT JEMALLOC_DISABLE_INITIAL_EXEC_TLS)
     set(JEMALLOC_TLS_MODEL "__attribute__((tls_model(\"initial-exec\")))")
 else()
     set(JEMALLOC_TLS_MODEL " ")

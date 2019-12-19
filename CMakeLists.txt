@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
+# Require CMake 3.13 with CMP0077 Without CMP0077, downstream projects can not
+# modify any of the options declared by jemalloc
+cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
 project(jemalloc C CXX)
 

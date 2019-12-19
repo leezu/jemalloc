@@ -238,4 +238,5 @@ endif()
 #--
 #2103-AC_ARG_ENABLE([initial-exec-tls],
 #2104:  [AS_HELP_STRING([--disable-initial-exec-tls],
-#2105-                  [Disable the initial-exec tls model])],
+#2105-                  [])],
+option(JEMALLOC_DISABLE_INITIAL_EXEC_TLS "Disable the initial-exec tls model" OFF)
